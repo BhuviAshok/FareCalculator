@@ -13,23 +13,22 @@ import static org.springframework.http.HttpStatus.SERVICE_UNAVAILABLE;
 
 @Slf4j
 @ControllerAdvice
-@SuppressWarnings("rawtypes")
 public class ExceptionController {
 
-	@ExceptionHandler(Throwable.class)
-	public HttpEntity handleGlobalException(Throwable t) {
-		// log.error("Unable to process request.", t);
-		return new ResponseEntity(SERVICE_UNAVAILABLE);
-	}
+    @ExceptionHandler(Throwable.class)
+    public HttpEntity handleGlobalException(Throwable t) {
+        log.error("Unable to process request.", t);
+        return new ResponseEntity(SERVICE_UNAVAILABLE);
+    }
 
-	@ExceptionHandler(HttpServerErrorException.class)
-	public HttpEntity handleGlobalException(HttpServerErrorException e) {
-		return new ResponseEntity(e.getStatusCode());
-	}
+    @ExceptionHandler(HttpServerErrorException.class)
+    public HttpEntity handleGlobalException(HttpServerErrorException e) {
+        return new ResponseEntity(e.getStatusCode());
+    }
 
-	@ExceptionHandler(IllegalArgumentException.class)
-	public HttpEntity handleBadRequest() {
-		return new ResponseEntity(BAD_REQUEST);
-	}
+    @ExceptionHandler(IllegalArgumentException.class)
+    public HttpEntity handleBadRequest() {
+        return new ResponseEntity(BAD_REQUEST);
+    }
 
 }
