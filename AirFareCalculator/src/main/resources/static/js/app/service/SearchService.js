@@ -20,7 +20,6 @@ angular.module('app').factory('SearchService', ['$localStorage', '$http', '$q', 
                 $http.get(api.LOCATION_SEVICE_API)
                     .then(
                         function (response) {
-                            console.log('Fetched successfully all locations');
                             $localStorage.locs = response.data;
                             deferred.resolve(response);
                         },
@@ -43,7 +42,6 @@ angular.module('app').factory('SearchService', ['$localStorage', '$http', '$q', 
                 $http.get(api.FARE_SERVICE_API + '/' + source + '/' + dest)
                     .then(
                         function (response) {
-                            console.log('Fetched successfully all flights');
                             $localStorage.flightList = response.data;
                             deferred.resolve(response);
                         },
@@ -66,7 +64,6 @@ angular.module('app').factory('SearchService', ['$localStorage', '$http', '$q', 
                 $http.get(api.METRICS_SERVICE_API)
                     .then(
                         function (response) {
-                            console.log('Metrics fetched successfully from server');
                             $localStorage.metrics = response.data;
                             deferred.resolve(response);
                         },

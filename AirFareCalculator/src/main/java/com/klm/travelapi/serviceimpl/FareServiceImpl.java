@@ -32,7 +32,6 @@ public class FareServiceImpl implements FareService {
 	@Async
 	public Future<FareResponse> findFare(String origin, String destination) {
 		 String url = String.format(faresUrl, baseUrl, origin, destination);
-		 System.out.println("URL--------->"+url);
 		 FareResponse fareResponse = restTemplate.getForObject(url, FareResponse.class);
 	        return new AsyncResult<FareResponse>(fareResponse);
 		

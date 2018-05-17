@@ -67,7 +67,6 @@ public class AirFareController {
 		Fare fare = new Fare(fareResponse);
 		fare.setOrigin(locationOrigin);
 		fare.setDestination(locationDestination);
-		System.out.println(fare);
 		return fare;
 		
 	}

@@ -3,9 +3,7 @@ package com.klm.travelapi.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.jsonschema.JsonSerializableSchema;
 
-/**
- * Created by Sourabh Suman on 06/12/2017.
- */
+
 @JsonSerializableSchema
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FareResponse {

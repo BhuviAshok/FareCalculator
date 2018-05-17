@@ -16,7 +16,13 @@ Steps to run the application:-
 	1. Clone the repo  'AirFareCalculator' and 'simple-travel-api-mock' into your favourite IDE (Eclipse preferred)
 	2. Update project with maven/gradle to download all application level depencies.
 	3. Start the 'simple-travel-api-mock' application first to boots up the API at port 8080.
-	4. Now start the 'AirFareCalculator' and hit the URL  http://localhost:9090/travel to view the application.
+	4. Now start the 'AirFareCalculator' application using the following commands.
+	   Build:
+	   mvn clean install 
+	   Run: 
+	   mvn spring-boot:run
+	   Hit the below URL 
+	   http://localhost:9090/travel to view the application.
 	
 Steps to run the test scripts:-
 
